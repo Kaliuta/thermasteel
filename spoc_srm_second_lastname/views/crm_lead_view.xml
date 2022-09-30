@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<odoo>
+    <record id="crm_lead_view_form" model="ir.ui.view">
+        <field name="name">Add lastname2</field>
+        <field name="model">crm.lead</field>
+        <field name="inherit_id" ref="crm.crm_lead_view_form" />
+        <field name="arch" type="xml">
+            <xpath expr="//field[@name='contact_name']" position="after">
+                <field name="contact_lastname2" placeholder="Second last name" />
+            </xpath>
+
+            <xpath
+                expr="//page[@name='lead']//field[@name='contact_name']"
+                position="after"
+            >
+                <field name="contact_lastname2" placeholder="Second last name" />
+            </xpath>
+        </field>
+    </record>
+</odoo>
